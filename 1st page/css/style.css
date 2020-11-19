@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif ;
+    box-sizing: border-box;
+}
+.bg-image{
+    position: absolute;
+    width: 1440px;
+    height: 1024px;
+    background: url('/images/pexels-tiger-lily-4483609.jpg');
+    filter: blur(5px);
+}
+.container{
+    position: absolute;
+    width: 770px;
+    height: 200px;
+    left: 670px;
+    top: 400px;
+    background: #E6E6FA;
+}
+.container h3{
+    position: absolute;
+    width: 426px;
+    height: 97px;
+    left:50px;
+    top: 80px;
+
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: right;
+    letter-spacing: -0.333333px;
+    color: #808080;
+}
+.blue-container{
+    position: absolute;
+    width: 1440px;
+    height: 174px;
+    top: 600px;
+    left:0;
+    background: rgba(44, 166, 205, 0.6);
+}
+
+.min-con i{
+    color: white;
+
+}
+.min-con{
+    padding-top: 15%;
+    padding-left: 45%;
+    width: 360px;
+    height: 174px;
+    top:600px;
+    border-right: 3px solid white;
+
+}
+
+.white-container{
+    position: relative;
+    width: 1440px;
+    height: 50px;
+    top: 750px;
+    left:0;
+    background: #E6E6FA;
+    padding-bottom: 5%;
+}
+.base{
+    padding-top: 1%;
+    padding-left: 10%;
+    width: 360px;
+    height: 50px;
+    top: 750px;
+    border-right: 3px solid white;
+}
+.base h3{
+    text-align: center;
+    color:  rgba(44, 166, 205, 0.6);
+}
+#logo {
+    max-width: 265px;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+.logodiv {
+    padding-left: 20px;
+    padding-top: 15;
+    width: 100%;
+    height: 155px;
+    margin-left: 60%;
+}
+#bottom { 
+    position:absolute;                  
+    bottom:0;                          
+    right:0;                          
+} 
