@@ -1,0 +1,72 @@
+body
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #fff;
+    background: url(hi5.jpg);
+    background-size: cover;
+}
+a
+{
+    color: yellow;
+    text-decoration: blink;
+    font-family: Tahoma, Geneva, sans-serif;
+    margin-left: 35px;
+}
+.forget
+{
+    background: rgba(44,62,80,0.7);
+    padding: 60px;
+    width: 240px;
+    height: 340px;
+    margin-left: 180px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+h2
+{
+    margin-top: 28px;
+    margin-left: 10px;
+}
+input[type=email]
+{
+    width: 240px;
+    color: #fff;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-family: 'play',sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    transition: border 0.5s;
+}
+input[type=button]
+{
+    border: none;
+    width: 180px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+input[type=button]:hover
+{
+    color: #fff;
+    background: black;
+}
+.container
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+::placeholder{
+    color: aliceblue;
+    opacity: 0.8; /* Firefox */;
+
+}
