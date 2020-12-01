@@ -42,7 +42,9 @@
           <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><img src="img/avatar-6.jpg" alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow"></a>
             <div aria-labelledby="userInfo" class="dropdown-menu"><a href="#" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Admin</strong><small>WeR4You Industrial</small></a>
               <!-- <div class="dropdown-divider"></div><a href="#" class="dropdown-item">Settings</a><a href="#" class="dropdown-item">Activity log       </a> -->
-              <div class="dropdown-divider"></div><a href="user_logout.php" class="dropdown-item">Logout</a>
+              <div class="dropdown-divider"></div>
+              <a href="change_pass.php" class="dropdown-item">Change Password</a>
+              <a href="admin_logout.php" class="dropdown-item">Logout</a>
             </div>
           </li>
         </ul>

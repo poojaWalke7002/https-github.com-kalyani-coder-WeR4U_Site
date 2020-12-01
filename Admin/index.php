@@ -1,4 +1,32 @@
-<?php  ?>
+<?php  
+ error_reporting(0);
+ require('include/connection.php');
+ session_start();
+
+if (isset($_POST['username']) and isset($_POST['password'])){
+      
+  // Assigning POST values to variables.
+  $user_name = $_POST['username'];
+  $password = $_POST['password'];
+
+  // CHECK FOR THE RECORD FROM TABLE
+  $query = "SELECT * FROM `Admin` WHERE user_name = '$user_name' and password = '$password'";
+   
+  $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+  $count = mysqli_num_rows($result);
+
+if ($count == 1){
+  
+   $_SESSION['user_name'] = $user_name;
+   echo" <script> window.location.href='home.php'</script>";
+
+}else{
+     
+     echo"<script>alert('Invalid Login Credentials')
+     window.location.href='index.php?fail'</script>"; 
+     }
+}
+?>
 
 <!DOCTYPE html>
 <html>

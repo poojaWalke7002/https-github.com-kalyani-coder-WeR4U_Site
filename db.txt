@@ -1,0 +1,22 @@
+--> admin :
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `user_name` varchar(500) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`user_name`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `admin` (`user_name`, `password`) VALUES
+('admin@gmail.com', 'admin');
+
+-->salesExecutive :
+
+CREATE TABLE IF NOT EXISTS `salesExecutive` (
+  `sr_no` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(500) NOT NULL,
+  `mobile` varchar(100) NOT NULL,
+  `city` varchar(500) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`,`name`)
+);
