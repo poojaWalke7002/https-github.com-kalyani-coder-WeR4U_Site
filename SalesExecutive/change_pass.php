@@ -1,5 +1,5 @@
 <?php  
-error_reporting(0);
+ error_reporting(0);
  require('include/connection.php');
  session_start();
 
@@ -11,31 +11,33 @@ error_reporting(0);
     echo"";
 
   }
-  if(isset($_POST['submit'])){
-      
-  // Assigning POST values to variables.
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $mobile = $_POST['mobile'];
-  $city = $_POST['city'];
-  $password = $_POST['password'];
 
-  // INSERT RECORD IN THE TABLE PRODUCTS
-  $query=("insert into `salesExecutive` (name,email,mobile,city,password) values ('$name','$email','$mobile','$city','$password')");
-   
-  $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-  $count = mysqli_num_rows($result);
+  $user_name = $_SESSION['user_name'];
 
-if ($count == 0){
-   echo" <script>window.location.href='allSalesExecutives.php?success'</script>";
+if(isset($_POST['submit'])){
+     //for match newPass and confirmPass
+   if($_POST["newPassword"] !== $_POST["confirmPassword"]){
+      echo" <script>alert('New password and confirmed password must be same!')
+            window.location.href='change_pass.php?fail'</script>";
 
-}else{
-     
-     echo"<script>alert('Errors in adding product')
-     window.location.href='addSalesxecutive.php?fail'</script>"; 
-     }
+   }else{
+          //fetch pass
+         $result = mysqli_query($connection,"SELECT * FROM salesExecutive WHERE name ='" . $user_name . "'") or die(mysqli_error($connection));
+         $row = mysqli_fetch_array($result);
+
+            if($_POST["currentPassword"] == $row["password"]){
+              //update password
+               $result = mysqli_query($connection,"UPDATE salesExecutive SET password = '" . $_POST["newPassword"] . "' WHERE name ='" . $user_name . "'");
+             
+              echo" <script>alert('Password succssesfully updated!')
+              window.location.href='salesExecutiveDashboard.php?success'</script>";
+          
+            }else{
+                  echo" <script>alert('Incorrect password!')
+                  window.location.href='change_pass.php?fail'</script>";
+                 }
+        }
 }
-
 mysql_close($connection);
 ?>
 
@@ -45,7 +47,7 @@ mysql_close($connection);
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>WeR4You-Add Sales Executive </title>
+  <title>WeR4You-Change Password </title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -80,35 +82,28 @@ mysql_close($connection);
   <div class="col-lg-12 mb-5" >
                 <div class="card">
                   <div class="card-header">
-                   <center><h3 class="h6 text-uppercase mb-0">Add Sales Executive</h3></center>
+                   <center><h3 class="h6 text-uppercase mb-0">Change Password</h3></center>
                   </div>
                   <div class="card-body">
-                  <form id="add-sales-executive" method="post" action="" class="mt-4">
+                  <form id="change_pass" method="post" action="" class="mt-4">
                    <div class="form-group">
-                    <label class="form-control-label">Name:</label>
-                    <input type="text" name="name" placeholder="Name" class="form-control" value='' required="">
+                    <label class="form-control-label">Current Password:</label>
+                    <input type="password" name="currentPassword" placeholder="Current Password" class="form-control" value='' required="">
                   </div> 
                   <div class="form-group">
-                    <label class="form-control-label">Email:</label>
-                    <input type="email" name="email" placeholder="Email ID" class="form-control" value='' required="">
-                  </div>
+                    <label class="form-control-label">New Password:</label>
+                    <input type="password" name="newPassword" placeholder="New Password" class="form-control" value='' required="">
+                  </div> 
                   <div class="form-group">
-                    <label class="form-control-label">Mobile:</label>
-                    <input type="tel" name="mobile" placeholder="Mobile No" class="form-control" value='' required="">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-control-label">City:</label>
-                    <input type="text" name="city" placeholder="City" class="form-control" value='' required="">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-control-label">Password:</label>
-                    <input type="password" name="password" placeholder="Password" class="form-control" value='' required="">
-                  </div>
+                    <label class="form-control-label">Confirm Password:</label>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control" value='' required="">
+                  </div> 
                   <center>
                     <div class="form-group">
-                      <button type="submit" name="submit" class="btn btn-primary">Add </button>
+                      <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                    </div>
                   </center>
-
+              
               </form>
 
                   </div>
