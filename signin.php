@@ -58,10 +58,8 @@ https://templatemo.com/tm-538-digital-trend
      <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg position-absolute">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
-              <i class="fa fa-line-chart"></i>
-               <i>WeR4U solutions </i> 
-            </a>
+        <h2 style="color: rgb(255, 255, 255);"> <i class="fa fa-line-chart"></i>
+                    <i>WeR4U solutions</i></h2>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
