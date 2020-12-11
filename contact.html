@@ -61,6 +61,7 @@
 
                     <h1 class="mb-4">Let's <strong>talk</strong> about  making project's profitable <strong>creatively</strong></h1>
 
+
                     <p>or email us at <a href="mailto:info@wer4u.in">info@wer4u.in</a></p>
                 </div>
 
@@ -68,16 +69,16 @@
 
                     <!-- Follow https://templatemo.com/contact page to setup your own contact form -->
 
-                    <form action="signin.php" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+                    <form action="mail.php" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
                         <div class="row">
                             <div class="col-lg-12 col-12">
-                                <input type="text" class="form-control" name="name" placeholder="Name">
+                                <input type="text" class="form-control" name="name" placeholder="Name" required>
                             </div>
 
-                            
-							<div class="col-lg-12 col-12" >
-			
-								 <label for="service" class="form-control">Services:         
+
+                            <div class="col-lg-12 col-12">
+
+                                <label for="service" class="form-control">Services:         
 								 <select name="service" id="service" >
 									<option >choose</option>
 									<option value="finance">Finance</option>
@@ -93,11 +94,11 @@
                             </div>
 
                             <div class="col-lg-12 col-12">
-                                <input type="email" class="form-control" name="email" placeholder="Email" autocomplete="on">
+                                <input type="email" class="form-control" name="email" placeholder="Email" autocomplete="on" required>
                             </div>
 
                             <div class="col-lg-12 col-12">
-                                <input type="text" class="form-control" name="Phone_no" placeholder="Mobile Number">
+                                <input type="number" class="form-control" name="Phone_no" placeholder="Mobile Number" required>
                             </div>
 
 						  
@@ -133,7 +134,7 @@
                             </div>
 							
                           <div class="col-lg-12 col-12">
-                            <textarea class="form-control" rows="6" name="message" placeholder="Message"></textarea>
+                            <textarea class="form-control" rows="6" name="message" placeholder="Message" required></textarea>
                           </div>
 
                             <div class="col-lg-5 mx-auto col-7">
