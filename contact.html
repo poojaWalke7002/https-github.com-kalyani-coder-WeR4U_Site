@@ -29,23 +29,52 @@
         <div class="container">
              <div class="dropdown">
 				<a class="navbar-brand" href="index.html">
-                <i class="fa fa-line-chart"></i> 
-				<i>WeR4U solutions</i>
-            </a>
-					<div class="dropdown-content">
+					<i class="fa fa-line-chart"></i> 
+					<i>WeR4U solutions</i>
+				</a>
+				
+				<div class="dropdown-content">
 						<a href="index.html">Home</a>
 						<a href="index.html#approach">Approach</a>
 						<a href="index.html#about">About Us </a>
 						<a href="index.html#gallery">Gallery </a>
-						<a href="Projects.html">Consultancy</a>
-						<a href="Services.html">Services</a>
-						<a href="Projects.html#projects">Projects</a>
-						<a href="vision.html">Vision</a>
-						<a href="contact.html">Contact</a>
-						<a href="login.html">Login</a>
 						
-					</div>
+				</div>
+			
 			</div>
+			
+			
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    
+                    
+					<li class="nav-item">
+                        <a href="Projects.html" class="nav-link">Consultancy</a>
+                    </li>
+					<li class="nav-item">
+                        <a href="Services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Projects.html#projects" class="nav-link">Projects</a>
+                    </li>					
+                    <li class="nav-item">
+                        <a href="vision.html" class="nav-link">Vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link ">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link ">ContactUs</a>
+                    </li>
+
+                </ul>
+            </div>
+
 
         </div>
     </nav>
@@ -61,7 +90,6 @@
 
                     <h1 class="mb-4">Let's <strong>talk</strong> about  making project's profitable <strong>creatively</strong></h1>
 
-
                     <p>or email us at <a href="mailto:info@wer4u.in">info@wer4u.in</a></p>
                 </div>
 
@@ -69,16 +97,16 @@
 
                     <!-- Follow https://templatemo.com/contact page to setup your own contact form -->
 
-                    <form action="mail.php" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+                    <form action="signin.php" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
                         <div class="row">
                             <div class="col-lg-12 col-12">
-                                <input type="text" class="form-control" name="name" placeholder="Name" required>
+                                <input type="text" class="form-control" name="name" placeholder="Name">
                             </div>
 
-
-                            <div class="col-lg-12 col-12">
-
-                                <label for="service" class="form-control">Services:         
+                            
+							<div class="col-lg-12 col-12" >
+			
+								 <label for="service" class="form-control">Services:         
 								 <select name="service" id="service" >
 									<option >choose</option>
 									<option value="finance">Finance</option>
@@ -94,11 +122,11 @@
                             </div>
 
                             <div class="col-lg-12 col-12">
-                                <input type="email" class="form-control" name="email" placeholder="Email" autocomplete="on" required>
+                                <input type="email" class="form-control" name="email" placeholder="Email" autocomplete="on">
                             </div>
 
                             <div class="col-lg-12 col-12">
-                                <input type="number" class="form-control" name="Phone_no" placeholder="Mobile Number" required>
+                                <input type="text" class="form-control" name="Phone_no" placeholder="Mobile Number">
                             </div>
 
 						  
@@ -134,7 +162,7 @@
                             </div>
 							
                           <div class="col-lg-12 col-12">
-                            <textarea class="form-control" rows="6" name="message" placeholder="Message" required></textarea>
+                            <textarea class="form-control" rows="6" name="message" placeholder="Message"></textarea>
                           </div>
 
                             <div class="col-lg-5 mx-auto col-7">

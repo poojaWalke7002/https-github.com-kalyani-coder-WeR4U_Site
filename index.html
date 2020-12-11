@@ -30,25 +30,55 @@
             
 			<div class="dropdown">
 				<a class="navbar-brand" href="index.html">
-                <i class="fa fa-line-chart"></i> 
-				<i>WeR4U solutions</i>
-            </a>
-					<div class="dropdown-content">
+					<i class="fa fa-line-chart"></i> 
+					<i>WeR4U solutions</i>
+				</a>
+				
+				<div class="dropdown-content">
 						<a href="index.html">Home</a>
 						<a href="#approach">Approach</a>
 						<a href="#about">About Us </a>
 						<a href="#gallery">Gallery </a>
-						<a href="Projects.html">Consultancy</a>
-						<a href="Services.html">Services</a>
-						<a href="Projects.html#projects">Projects</a>
-						<a href="vision.html">Vision</a>
-						<a href="contact.html">Contact</a>
-						<a href="login.html">Login</a>
 						
-					</div>
+				</div>
+			
 			</div>
+			
+			
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    
+                    
+					<li class="nav-item">
+                        <a href="Projects.html" class="nav-link">Consultancy</a>
+                    </li>
+					<li class="nav-item">
+                        <a href="Services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Projects.html#projects" class="nav-link">Projects</a>
+                    </li>					
+                    <li class="nav-item">
+                        <a href="vision.html" class="nav-link">Vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link ">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link ">ContactUs</a>
+                    </li>
+
+                </ul>
+            </div>
 
         </div>
+		
+		
     </nav>
 
 
@@ -371,34 +401,6 @@
     <script src="js/custom.js"></script>
 	
 	
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
 
 
 
