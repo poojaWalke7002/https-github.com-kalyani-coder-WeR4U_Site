@@ -37,7 +37,7 @@ try {
     $mail->setFrom('info@wer4u.in', $name);
     $mail->addAddress('info@wer4u.in', 'WeR4U team');     // Add a recipient
   //  $mail->addAddress('ellen@example.com');               // Name is optional
-   // $mail->addReplyTo('info@example.com', 'Information');
+    $mail->addReplyTo('info@wer4u.in', 'Information');
    // $mail->addCC('cc@example.com');
     //$mail->addBCC('bcc@example.com');
 
