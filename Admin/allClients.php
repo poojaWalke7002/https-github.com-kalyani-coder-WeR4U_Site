@@ -1,21 +1,21 @@
 <?php  
-  error_reporting(0);
-  require('include/connection.php');
-  session_start();
+ error_reporting(0);
+ require('include/connection.php');
+ session_start();
 
   if($_SESSION['user_name']=='')
   {
    header("location:index.php");
-  }else
-  {
+  }else{
     echo"";
 
   }
-   $user_name = $_SESSION['user_name'];
-   
-   $query = "SELECT * FROM salesExecutive";
 
-   $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+ $user_name = $_SESSION['user_name'];
+ 
+ $query = "SELECT * FROM `client`";
+
+ $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 
 ?>
 
@@ -24,7 +24,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>WeR4You-Sales Executives</title>
+    <title>WeR4You-All Clients</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -48,12 +48,11 @@
     <?php include 'include/sidebar.php'; ?>
     
       <div class="page-holder w-100 d-flex flex-wrap">
-
         <div class="container-fluid">
           <section class="py-5">
                 <div class="card">
                     <div class="card-header">
-                     <center><h6 class="text-uppercase mb-0">Sales Executives</h6>
+                     <center><h6 class="text-uppercase mb-0">All Clients</h6>
                      </center>
                     </div>
                   <?php
@@ -63,29 +62,58 @@
                       echo"<thead>";
                         echo"<tr>";
                          echo" <th>Sr.No.</th>";
-                          echo"<th>Name</th>";
-                          echo"<th>Email</th>";
-                          echo"<th>Mobile</th>";
-                          echo"<th>City</th>";
+                          echo"<th>Client Name</th>";
+                          echo"<th>Company Name</th>";
+                          echo"<th>Start Date</th>";
+                          echo"<th>End Date</th>";
+                          echo"<th>Daily Allowed Emails</th>";
+                          echo"<th>Active Status</th>";
+                          echo"<th>Email Id</th>";
+                          echo"<th>Contact No</th>";
+                          echo"<th>Authentication Key</th>";
+                          echo"<th>Daily Allowed SMS</th>";
+                          echo"<th>Total Email Limit</th>";
+                          echo"<th>Total SMS Limit</th>";
+                          echo"<th>Send By Email Id</th>";
                           echo"<th>Delete</th>";
                         echo"</tr>";
                       echo"</thead>";
                       echo"<tbody>";
+                      
                     $i=0;
              while ($retrive = mysqli_fetch_array($result)) 
                   {
-                    $name = $retrive['name'];
-                    $email = $retrive['email'];
-                    $mobile = $retrive['mobile'];
-                    $city = $retrive['city'];
+                      $ClientName = $retrive['ClientName'];
+                      $CompanyName = $retrive['CompanyName'];
+                      $StartDate = $retrive['StartDate'];
+                      $EndDate = $retrive['EndDate'];
+                      $DailyAllowedEmails = $retrive['DailyAllowedEmails'];
+                      $isActive = $retrive['isActive'];
+                      $emailId = $retrive['emailId'];
+                      $ContactNo = $retrive['ContactNo'];
+                      $AuthenticationKey = $retrive['AuthenticationKey'];
+                      $DailyAllowedSms = $retrive['DailyAllowedSms'];
+                      $TotalEmailLimit = $retrive['TotalEmailLimit'];
+                      $TotalSmsLimit = $retrive['TotalSmsLimit'];
+                      $SendByEmailId = $retrive['SendByEmailId'];
                    
                       echo" <tr>";
                       echo"<th scope='row'>".$i = $i+1;"</th>";
-                      echo"<td>$name</td>";
-                      echo"<td>$email</td>";
-                      echo"<td>$mobile</td>";
-                      echo"<td>$city</td>";
-                      echo"<td><a href='deleteSalesExecutive.php?del=$name'<button class='btn btn-danger'>Delete</button></td>";
+                      echo"<td>$ClientName</td>";
+                      echo"<td>$CompanyName</td>";
+                      echo"<td>$StartDate</td>";
+                      echo"<td>$EndDate</td>";
+                      echo"<td>$DailyAllowedEmails</td>";
+                      echo"<td>$isActive</td>";
+                      echo"<td>$emailId</td>";
+                      echo"<td>$ContactNo</td>";
+                      echo"<td>$AuthenticationKey</td>";
+                      echo"<td>$DailyAllowedSms</td>";
+                      echo"<td>$TotalEmailLimit</td>";
+                      echo"<td>$TotalSmsLimit</td>";
+                      echo"<td>$SendByEmailId</td>";
+                      
+                      echo"<td><a href='deleteClient.php?del=$ClientName'<button class='btn btn-danger'>Delete</button></td>";
                       echo"</tr>";
                     }    
                       echo"</tbody>";

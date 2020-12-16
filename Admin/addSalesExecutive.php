@@ -21,7 +21,7 @@ error_reporting(0);
   $password = $_POST['password'];
 
   // INSERT RECORD IN THE TABLE PRODUCTS
-  $query=("insert into `salesExecutive` (name,email,mobile,city,password) values ('$name','$email','$mobile','$city','$password')");
+  $query=("INSERT INTO `salesExecutive` (name,email,mobile,city,password) VALUES ('$name','$email','$mobile','$city','$password')");
    
   $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
   $count = mysqli_num_rows($result);
@@ -31,7 +31,7 @@ if ($count == 0){
 
 }else{
      
-     echo"<script>alert('Errors in adding product')
+     echo"<script>alert('Errors in adding new sales Executive')
      window.location.href='addSalesxecutive.php?fail'</script>"; 
      }
 }

@@ -15,15 +15,25 @@
               </ul>
             </div>
           </li>
+          
+          <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#user" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted"><i class="o-wireframe-1 mr-3 text-gray"></i><span>Clients</span></a>
+            <div id="user" class="collapse">
+              <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                <li class="sidebar-list-item"><a href="addClient.php" class="sidebar-link text-muted pl-lg-5">Add Client</a></li>
+                <li class="sidebar-list-item"><a href="allClients.php" class="sidebar-link text-muted pl-lg-5">Show Client</a></li>
+              </ul>
+            </div>
+          </li>
+          
 
-          <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#user" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted"><i class="o-wireframe-1 mr-3 text-gray"></i><span>Demo</span></a>
+          <!-- <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#user" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted"><i class="o-wireframe-1 mr-3 text-gray"></i><span>Demo</span></a>
             <div id="user" class="collapse">
               <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
                 <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Demo1</a></li>
             
               </ul>
             </div>
-          </li>
+          </li> -->
           <!-- <li class="sidebar-list-item"><a href="http://localhost/Khyatee-php/api/" class="sidebar-link text-muted"><i class=" o-wireframe-1 mr-3 text-gray"></i><span>api</span></a></li> -->
             
          

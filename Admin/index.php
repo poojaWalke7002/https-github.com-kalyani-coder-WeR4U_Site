@@ -51,9 +51,7 @@ if ($count == 1){
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.png?3">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
   </head>
   <body>
     <div class="page-holder d-flex align-items-center">
@@ -65,7 +63,7 @@ if ($count == 1){
           <div class="col-lg-5 px-lg-4">
             <h1 class="text-base text-primary text-uppercase mb-4">WeR4You-Industrial</h1>
             <h2 class="mb-4">Welcome back!</h2>
-            <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
+
             <form id="loginForm" method="post" action="" class="mt-4">
               <div class="form-group mb-4">
                 <input type="text" name="username" placeholder="Username or Email address" class="form-control border-0 shadow form-control-lg" required="">

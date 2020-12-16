@@ -1,5 +1,5 @@
 <?php  
-error_reporting(0);
+ error_reporting(0);
  require('include/connection.php');
  session_start();
 
@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
             window.location.href='change_pass.php?fail'</script>";
 
    }else{
-          //fetch pass
+        //fetch pass
          $result = mysqli_query($connection,"SELECT * from Admin WHERE user_name ='" . $user_name . "'") or die(mysqli_error($connection));
          $row = mysqli_fetch_array($result);
 
@@ -38,12 +38,13 @@ if(isset($_POST['submit'])){
                  }
         }
 }
+
 mysql_close($connection);
+
 ?>
 
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,7 +68,6 @@ mysql_close($connection);
   <link rel="shortcut icon" href="img/favicon.png?3">
 
 </head>
-
 <body>
 
   <?php include 'include/header.php'; ?>
@@ -78,26 +78,29 @@ mysql_close($connection);
         <div class="container-fluid px-xl-5">
           <section class="py-5">
             <div class="row">
-
-  <div class="col-lg-12 mb-5" >
+             <div class="col-lg-12 mb-5">
                 <div class="card">
                   <div class="card-header">
                    <center><h3 class="h6 text-uppercase mb-0">Change Password</h3></center>
                   </div>
                   <div class="card-body">
                   <form id="change_pass" method="post" action="" class="mt-4">
-                   <div class="form-group">
+                  
+                  <div class="form-group">
                     <label class="form-control-label">Current Password:</label>
                     <input type="password" name="currentPassword" placeholder="Current Password" class="form-control" value='' required="">
                   </div> 
+                  
                   <div class="form-group">
                     <label class="form-control-label">New Password:</label>
                     <input type="password" name="newPassword" placeholder="New Password" class="form-control" value='' required="">
                   </div> 
+                  
                   <div class="form-group">
                     <label class="form-control-label">Confirm Password:</label>
                     <input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control" value='' required="">
                   </div> 
+                  
                   <center>
                     <div class="form-group">
                       <button type="submit" name="submit" class="btn btn-primary">Submit</button>
@@ -120,7 +123,6 @@ mysql_close($connection);
         <div class="col-md-6 text-center text-md-left text-primary">
           <p class="mb-2 mb-md-0">WeR4You-Industrial &copy; 2020</p>
         </div>
-
       </div>
     </div>
   </footer>
